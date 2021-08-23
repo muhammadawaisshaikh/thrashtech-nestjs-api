@@ -8,6 +8,7 @@
 # Guide to Develop Backend using NESTJS
 
 https://dev.to/carlomigueldy/building-a-restful-api-with-nestjs-and-mongodb-mongoose-2165
+https://github.com/carlomigueldy/nest-js-todo-rest-api
 
 ## init new nest app
 > nest new thrashtech-nestjs-api
