@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProjectsModule } from './projects/projects.module';
-
-import { MongooseModule } from '@nestjs/mongoose';
+import config from './config/keys';
+import { ProjectsModule } from './modules/projects/projects.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/thrastech-nestjs-api'),
+    MongooseModule.forRoot(config.mongoURI,{
+      dbName: config.db
+    }),
     ProjectsModule,
   ],
   controllers: [AppController],

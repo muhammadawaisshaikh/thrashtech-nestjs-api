@@ -7,10 +7,10 @@ import {
     Post,
     Put,
 } from '@nestjs/common';
-import { BaseProject } from './dto/base-project.dto';
+import { BaseProject } from '../../dto/base-project.dto';
 import { ProjectService } from './project.service';
 
-@Controller('project')
+@Controller('projects')
 export class ProjectController {
     constructor(private readonly service: ProjectService) { }
 
