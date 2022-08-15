@@ -7,8 +7,11 @@ import { ProjectsModule } from './modules/projects/projects.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(config.mongoURI,{
-      dbName: config.db
+    MongooseModule.forRoot(config.mongoURI, {
+      dbName: config.dbName,
+      
+      useNewUrlParser: true,
+      useUnifiedTopology: true
     }),
     ProjectsModule,
   ],
