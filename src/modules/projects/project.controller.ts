@@ -26,7 +26,7 @@ export class ProjectController {
     @ApiResponse({
         status: 200,
         description: 'The records found',
-        type: Project,
+        type: [Project],
     })
     async index() {
         return await this.service.findAll();
