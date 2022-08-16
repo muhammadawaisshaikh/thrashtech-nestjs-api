@@ -15,7 +15,6 @@ import {
 } from '@nestjs/swagger';
 import { BaseProject } from '../../dto/projects/base-project.dto';
 import { ProjectService } from './project.service';
-import { Project } from './entities/project.entity';
 
 @Controller('projects')
 @ApiTags('projects')
@@ -27,7 +26,7 @@ export class ProjectController {
     @ApiResponse({
         status: 200,
         description: 'The records found',
-        type: [Project],
+        type: [BaseProject],
     })
     async index() {
         return await this.service.findAll();
@@ -38,7 +37,7 @@ export class ProjectController {
     @ApiResponse({
         status: 200,
         description: 'The record found',
-        type: Project,
+        type: BaseProject,
     })
     async find(@Param('id') id: string) {
         return await this.service.findOne(id);
@@ -49,7 +48,7 @@ export class ProjectController {
     @ApiResponse({
         status: 200,
         description: 'The record found',
-        type: Project,
+        type: BaseProject,
     })
     async create(@Body() createTodoDto: BaseProject) {
         return await this.service.create(createTodoDto);
@@ -60,7 +59,7 @@ export class ProjectController {
     @ApiResponse({
         status: 200,
         description: 'The record updated',
-        type: Project,
+        type: BaseProject,
     })
     async update(@Param('id') id: string, @Body() updateTodoDto: BaseProject) {
         return await this.service.update(id, updateTodoDto);
@@ -71,7 +70,7 @@ export class ProjectController {
     @ApiResponse({
         status: 200,
         description: 'The record deleted',
-        type: Project,
+        type: BaseProject,
     })
     async delete(@Param('id') id: string) {
         return await this.service.delete(id);
