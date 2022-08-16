@@ -7,7 +7,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Thrashtech')
-    .setDescription('Thrashtech API for managing tanker loads and release load with other features')
+    .setDescription('Thrashtech API for Corporate Dynamic Website')
     .setVersion('1.0')
     .addTag('thrashtech-api')
     .build();
