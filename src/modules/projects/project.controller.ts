@@ -18,6 +18,7 @@ import { ProjectService } from './project.service';
 import { Project } from './entities/project.entity';
 
 @Controller('projects')
+@ApiTags('projects')
 export class ProjectController {
     constructor(private readonly service: ProjectService) { }
 
