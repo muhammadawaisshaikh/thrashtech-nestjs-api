@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import config from './config/keys';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { ServicesModule } from './modules/services/services.module';
+import { TechnologiesModule } from './modules/technologies/technologies.module';
 
 @Module({
   imports: [
@@ -12,7 +13,8 @@ import { ServicesModule } from './modules/services/services.module';
       dbName: config.dbName,
     }),
     ProjectsModule,
-    ServicesModule
+    ServicesModule,
+    TechnologiesModule
   ],
   controllers: [AppController],
   providers: [AppService],
