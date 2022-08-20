@@ -8,6 +8,9 @@
 # Postman Collection
 https://www.getpostman.com/collections/2b4a31c93556b59bbdd3
 
+# Swagger API Documentation
+http://localhost:3000/api
+
 # Guide to Develop Backend using NESTJS
 
 ## Rest API
